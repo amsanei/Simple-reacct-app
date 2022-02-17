@@ -6,7 +6,9 @@ function Profile() {
   let { username } = useParams();
   return (
     <div>
-      this is Profile page for {username}{" "}
+      {username
+        ? "this is Profile page for " + username + " "
+        : "this is the profile page"}
       <button onClick={() => navigate("/about")}>About page</button>{" "}
     </div>
   );
